@@ -1,0 +1,67 @@
+.page-win {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  margin-top: 20px;
+  border-radius: 50px;
+  background: linear-gradient(-45deg, #d46240, #c03068, #1f8abb, #1ca48a);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page-win h1 {
+  font-size: 5rem;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+/* انیمیشن پس‌زمینه گرادیانت */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* انیمیشن درخشش متن */
+@keyframes textGlow {
+  from { text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
+  to { text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.4); }
+}
+
+/* انیمیشن ظاهر شدن با تأخیر */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* دکمه با افکت هاور */
+.win-button {
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid #ffffff;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.win-button:hover {
+  background-color: #ffffff;
+  color: #23a6d5;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
